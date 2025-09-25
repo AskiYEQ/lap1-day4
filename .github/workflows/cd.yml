@@ -79,6 +79,7 @@ jobs:
         uses: azure/login@v2
         with:
           creds: ${{secrets.AZURE_CREDENTIALS}}
+          
       - name: Upload package to Blob
         uses: azure/cli@v2
         env:
@@ -95,4 +96,5 @@ jobs:
               --file $ZIP_NAME \
               --name $ZIP_NAME \
               --overwrite
+
 
