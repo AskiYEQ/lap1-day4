@@ -1,7 +1,7 @@
 name: CI/CD Pipeline with SonarQube and Azure VM
 
 on:
-  workflow_dispatch:
+  branches: main
 
 permissions:
   contents: read
