@@ -1,8 +1,9 @@
 name: CI/CD Pipeline with SonarQube and Azure VM
 
 on:
-  branches: main
-
+  push:
+    branches: [ main ]
+    
 permissions:
   contents: read
   actions: read
@@ -96,6 +97,7 @@ jobs:
               --file $ZIP_NAME \
               --name $ZIP_NAME \
               --overwrite
+
 
 
 
